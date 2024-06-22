@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edhii Fakuuuuuu</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .header{
+                display:flex;
+                flex-direction: row;
+                height:60px;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                position: fixed;
+                top:0px;
+                left:0px;
+                right:0px;
+                background-color: white;
+                z-index: 100;
+                border-bottom-color: rgb(231, 228, 228);
+                border-bottom-style: solid;
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .dh1{
+                margin-left:15px;
+                width:150px;
+                display:flex;
+                align-items: center;
+            }
+            .dh2{
+                margin-left:28px;
+                display:flex;
+                flex:1;
+                flex-direction: row;
+                min-width: 0px;
+                max-width: 500px;
+            }
+            .dh3{
+                margin-left:30px;
+                margin-right: 30px;
+                width: 160px;
+                display:flex;
+                flex-shrink: 0;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .i1{
+                margin-top: 6px;
+                width:40px;
+                height:35px;
+                border-radius: 25px;
+            }
+            .i2{
+                margin-left:8px;
+                width:105px
+            }
+            .inp{
+                flex:1;
+                min-width: 0;
+                height:45px;
+                font-size: 20px;
+            }
+            .i3{
+                width: 25px;
+                height:20px;
+            }
+            .b1{
+                width:70px;
+                height:45px;
+                margin-left:-1px;
+            }
+            .b1:hover{
+                cursor: pointer;
+            }
+            .i4{
+                padding-top: 3px;;
+                width:25px;
+            }
+            .i5,.i6,.i7,.i8,.b1,.b2,.i2,.i1,.s1,.sdiv:hover{
+                cursor: pointer;
+            }
+            .b2{
+                border:none;
+                height:45px;
+                width:40px;
+                border-radius:60px;
+                margin-left:10px;
+            }
+            .i5{
+                width:30px;
+            }
+            .i6,.i7{
+                width:25px;
+            }
+            .i8{
+                width:35px;
+                height:35px;
+                border-radius: 25px;
+            }
+
+
+            .img{
+                width:100%;
+                height: 100%;
+            }
+            .p1{
+                font-weight: 500;
+                margin-top:3px;
+                margin-bottom:5px;
+            }
+            .p2{
+                font-weight: bold;
+                color:gray;
+                margin-top:3px;
+                margin-bottom:5px;
+            }
+            .p3{
+                font-weight: bold;
+                margin-top:3px;
+                margin-bottom:5px;
+                
+            }
+            .d1{
+                display: grid;
+                grid-template-rows: 2fr 1fr;
+               margin-left:10px;
+            }
+            .ib1{
+                width:50px;
+                height:40px;
+                display:inline-block;
+                border-radius: 100%;
+            }
+            .d2{
+                display:inline-block;
+                vertical-align: top;
+            }
+            .d3{
+                display:inline-block;
+            }
+            .g1{
+                margin-top: 5px;
+                display:grid;
+                grid-template-columns: 1fr 4fr;
+            }
+            .grid{
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap:20px;
+                row-gap:15px;
+                padding-left: 0px 40px 0px 30px;
+            }
+            
+            @media(max-width:900px){
+                .grid{
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            @media(max-width:500px){
+                .grid{
+                    grid-template-columns: 1fr;
+                }
+            }
+            .sidebar{
+                color:black;
+                position:fixed;
+                top:50px;
+                bottom:0px;
+                left:0px;
+                width:64px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                top: 58px;
+                background-color: white;
+                z-index: 101;
+            }
+            .s1{
+                width:30px;
+            }
+            
+            .sdiv{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+                width: 100%;
+                height: 80px;
+            }
+            .sdiv:hover{
+                background-color: rgb(197, 185, 185);
+            }
+            .vid-timer{
+                position: relative;
+            }
+            .timer{
+                background-color: black;
+                color:white;
+                position: absolute;
+                bottom: 5px;
+                right:6px;
+                border-radius: 3px;
+                padding:4px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            </style>
+    </head>
+    <body style="  padding-top: 80px; padding-left:80px; background-color: rgb(248, 243, 243);">
+        <div class="header">
+            <div class="dh1">
+                <img class="i1"src="https://supersimple.dev/public/img/exercises/youtube/icons/hamburger-menu.svg" title="menu">
+                <img class="i2" src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-logo.svg">
+            </div>
+            <div class="dh2">
+                <input class="inp" type="search" placeholder="search">
+                <button class="b1" title="search">
+                    <img class="i3" src="https://supersimple.dev/public/img/exercises/youtube/icons/search.svg">
+                </button>
+                <button class="b2" title="search with voice">
+                    <img class="i4" src="https://supersimple.dev/public/img/exercises/youtube/icons/voice-search-icon.svg">
+                    </button>
+            </div>
+            <div class="dh3">
+                <img class="i5" src="https://supersimple.dev/public/img/exercises/youtube/icons/upload.svg" title="create">
+                <img class="i6" src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-apps.svg" title="youtube apps">
+                <div style="position: relative;">               
+                     <img class="i7" src="https://supersimple.dev/public/img/exercises/youtube/icons/notifications.svg" title="notifications">
+                     <div style="background-color: red; border-radius: 19px; position: absolute;top:0px;right:0px; padding:3px; font-size: 10px; color:white; height: 7px; padding-bottom: 6px; padding-left: 4px; cursor:pointer">3</div>
+                </div>
+                <img class="i8" src="o.jpg">
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sdiv" >
+               <img class="s1" src="https://supersimple.dev/public/img/exercises/youtube/icons/home.svg">
+               <p style="margin-top: 0px; font-size: 12px; text-align: center;">Home</p>
+            </div>
+            <div class="sdiv" >
+                <img class="s1" src="https://supersimple.dev/public/img/exercises/youtube/icons/explore.svg">
+                <p style="margin-top: 0px; font-size: 12px; text-align: center;">Explore</p>
+             </div>
+             <div class="sdiv" >
+                <img class="s1" src="https://supersimple.dev/public/img/exercises/youtube/icons/subscriptions.svg">
+                <p style="margin-top: 0px; font-size: 12px;text-align: center;">Subscription</p>
+             </div>
+             <div class="sdiv" >
+                <img class="s1" src="https://supersimple.dev/public/img/exercises/youtube/icons/originals.svg">
+                <p style="margin-top: 0px; font-size: 12px; text-align: center;">Originals</p>
+             </div>
+             <div class="sdiv" >
+                <img class="s1" src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-music.svg">
+                <p style="margin-top: 0px; font-size: 12px; text-align: center;">YouTube Music</p>
+             </div>
+             <div class="sdiv" >
+                <img class="s1" src="https://supersimple.dev/public/img/exercises/youtube/icons/library.svg">
+                <p style="margin-top: 0px; font-size: 12px; text-align: center;">Library</p>
+             </div>
+        </div>
+        <div class="grid">
+            <div class="d1">
+                    <div class="vid-timer">
+                        <a href="https://www.youtube.com/watch?v=Hfbe73rLBZk&pp=ygUPem9ybyBlcGljIGZpZ2h0"><img class="img" src="Zoro vs Killer.jpeg" ></a>
+                        <div class="timer">2:18</div>
+                    </div>
+                <div class="g1">
+                        <div class="d2">
+                            <img class="i1" src="oxixi.jpg">
+                        </div>
+                    <div class="d3">
+                        <p class="p1">
+                            Zoro vs Killer
+                        <p class="p2">
+                            Oxixi
+                        </p>
+                        <p class="p3">1.2M views
+                            3 years ago</p>
+                    </div>
+                </div>
+            </div>
+        <div class="d1">
+            <div class="vid-timer">
+                <a href="https://www.youtube.com/watch?v=B677vBHE10U&pp=ygUPem9ybyBlcGljIGZpZ2h0"><img class="img" src="zoro vs kaido.jpeg" ></a>
+                <div class="timer">2:11</div>
+            </div>
+            <div class="g1">
+                <div class="d2">
+                    <img class="i1" src="amino.jpg">
+                </div>
+                <div class="d3">
+                        <p class="p1">
+                            Zoro attacks Kaido with Conquerors Haki
+                        <p class="p2">
+                            mino Acid
+                        </p>
+                        <p class="p3">494K views  1 year ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d1">
+            <div class="vid-timer">
+                <a href="https://www.youtube.com/watch?v=-rTzyZZGJ84&pp=ygUSa2Fsa2kgMjg5OCB0cmFpbGVy"><img class="img" src="kalki.jpeg" ></a>
+                <div class="timer">2:23</div>
+            </div>
+            <div class="g1">
+                <div class="d2">
+                    <img class="i1" src="VN.jpg">
+                </div>
+                <div class="d3">
+                        <p class="p1">
+                            Kalki 2898 AD Release Trailer - Telugu | Prabhas | Amitabh | Kamal Haasan | Deepika | Nag Ashwin                        
+                            <p class="p2">
+                                Vyjayanthi Network 
+                            </p>
+                        <p class="p3">
+                            
+5,923,574 views  13 hours ago  #1 on Trending</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d1">
+            <div class="vid-timer">
+                <a href="https://www.youtube.com/watch?v=qLVml1TbuD0&pp=ygUPem9ybyBlcGljIGZpZ2h0"><img class="img" src="zoro vs king.jpeg" ></a>
+                <div class="timer">1:49</div>
+            </div>
+            <div class="g1">
+                <div class="d2">
+                    <img class="i1" src="nika.jpg">
+                </div>
+                <div class="d3">
+                        <p class="p1">
+                            Zoro vs King
+                        <p class="p2">
+                            Nika
+                        </p>
+                        <p class="p3">
+                            1M views  1 year ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d1">
+            <div class="vid-timer">
+                <a href="https://www.youtube.com/watch?v=deGXPT8Fhmk&pp=ygUPem9ybyBlcGljIGZpZ2h0"><img class="img" src="zoro vs admiral.jpeg" ></a>
+                <div class="timer">2:15</div>
+            </div>
+            <div class="g1">
+                <div class="d2">
+                    <img class="i1" src="anime.jpg">
+                </div>
+                <div class="d3">
+                        <p class="p1">
+                            Zoro vs Admiral
+                        <p class="p2">
+                            Animedoon
+                        </p>
+                        <p class="p3">
+                            3.1M views 2 years ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d1">
+            <div class="vid-timer">
+                <a href="https://www.youtube.com/watch?v=xoI6xQVdNtM"><img class="img" src="MCM.jpeg" ></a>
+                <div class="timer">21:29</div>
+            </div>
+            <div class="g1">
+                <div class="d2">
+                    <img class="i1" src="MCM-L.jpg">
+                </div>
+                <div class="d3">
+                        <p class="p1">
+                            Filmymoji Middle Class Madhu Budatha vs Batch Naatu Guntala Gang MCM
+                        <p class="p2">
+                            Filmymoji
+
+                        </p>
+                        <p class="p3">
+                            4.7M views 1 year ago</p>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+</div>
+           
+</div>
+    </body>
+</html>
